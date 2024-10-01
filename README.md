@@ -15,6 +15,8 @@
 </details>
 <details>
 <summary>2 - 03.10</summary>
+
+![image](https://github.com/user-attachments/assets/feb7213e-038f-4eda-999a-c9b296817b59)
   
 </details>
 <details>
