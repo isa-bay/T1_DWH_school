@@ -20,7 +20,7 @@
   
 </details>
 <details>
-<summary>3 - </summary>
+<summary>3 - 08.10</summary>
   
 </details>
 
