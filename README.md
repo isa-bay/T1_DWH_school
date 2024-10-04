@@ -20,11 +20,17 @@
   
 </details>
 <details>
-<summary>3 - 08.10</summary>
+<summary> R3.1 - 08.10</summary>
+
+![image](https://github.com/user-attachments/assets/a1c669b3-90b4-46ae-aef8-334c956e1174)
+
   
 </details>
 <details>
-<summary>4 - 10.10</summary>
+<summary> R3.2 - 08.10</summary>
+
+![image](https://github.com/user-attachments/assets/a36e7c6b-1c42-48e5-a6e6-de54bf5c50e9)
+
   
 </details>
 
