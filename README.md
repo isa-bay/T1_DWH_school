@@ -109,15 +109,30 @@
 | `gp_workfile_usage_per_query`            | Использование рабочих файлов по запросам                               | Анализ потребления ресурсов заданными запросами             |
 | `gp_workfile_usage_per_segment`          | Использование рабочих файлов по сегментам                              | Детальный мониторинг использования рабочих файлов           |
 
-</details>
+  </details>
 </details>
 
 <details>
 <summary>✦✦✦ Задание 3 - 08.10 ✦✦✦</summary>
 
-![image](https://github.com/user-attachments/assets/a1c669b3-90b4-46ae-aef8-334c956e1174)
+  <details>
+<summary>Практическое задание R3.1</summary>
 
+![image](https://github.com/user-attachments/assets/53e12351-4371-4895-9d76-6e56a46e30bc)
   
+  </details>
+    <details>
+<summary>Практическое задание R3.2</summary>
+
+![image](https://github.com/user-attachments/assets/ce8b3331-cc9c-4873-9469-fed3b715e53c)
+  
+  </details>
+    <details>
+<summary>Сквозное задание S3.1</summary>
+
+![image](https://github.com/user-attachments/assets/e4d95891-1f98-491f-8300-0f0d6f53dc53)
+  
+  </details>
 </details>
 
 <details>
