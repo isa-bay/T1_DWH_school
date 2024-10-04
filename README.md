@@ -5,7 +5,7 @@
 ![Снимок экрана](https://github.com/user-attachments/assets/709c8a8f-58d7-4b23-af03-d782bb9f5b9b)
 
 <details>
-<summary><span style="color: blue;">Задание 1 - 30.09</span></summary>
+<summary><font color="blue">Задание 1 - 30.09</font></summary>
 
 <details>
 <summary>Практическое задание</summary>
