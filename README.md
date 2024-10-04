@@ -8,7 +8,7 @@
 <summary>✦✦✦ Задание 1 - 30.09 ✦✦✦</summary>
 
 <details>
-<summary><span style="color:blue">Практическое задание</span></summary>
+<summary>Практическое задание</summary>
 
   ![Снимок экрана 2024-09-30 172943](https://github.com/user-attachments/assets/a4b25435-41e3-4a2e-abf7-af63afbfcc36)
 
@@ -40,7 +40,7 @@
 </details>
 
 <details>
-<summary><span style="color: blue;">ЗЗадание 2 - 03.10</span></summary>
+<summary>✦✦✦ Задание 2 - 03.10 ✦✦✦</summary>
 
   <details>
 <summary>Практическое задание</summary>
