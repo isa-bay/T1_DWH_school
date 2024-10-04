@@ -5,10 +5,10 @@
 ![Снимок экрана](https://github.com/user-attachments/assets/709c8a8f-58d7-4b23-af03-d782bb9f5b9b)
 
 <details>
-<summary>--- Задание 1 --- 30.09</summary>
+<summary>✦✦✦ Задание 1 - 30.09 ✦✦✦</summary>
 
 <details>
-<summary>Практическое задание</summary>
+<summary><span style="color:blue">Практическое задание</span></summary>
 
   ![Снимок экрана 2024-09-30 172943](https://github.com/user-attachments/assets/a4b25435-41e3-4a2e-abf7-af63afbfcc36)
 
