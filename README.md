@@ -17,19 +17,6 @@
 <summary>2 - 03.10</summary>
 
 ![image](https://github.com/user-attachments/assets/feb7213e-038f-4eda-999a-c9b296817b59)
-  
-</details>
-<details>
-<summary> 3.1 - 08.10</summary>
-
-![image](https://github.com/user-attachments/assets/a1c669b3-90b4-46ae-aef8-334c956e1174)
-
-  
-</details>
-<details>
-<summary> 3.2 - 08.10</summary>
-
-![image](https://github.com/user-attachments/assets/a36e7c6b-1c42-48e5-a6e6-de54bf5c50e9)
 
 ### Таблицы в схеме arenadata_toolkit
 
@@ -51,6 +38,19 @@
 | `gp_size_of_database`       | Размер базы данных.                                   | Для наблюдения за использованием дискового пространства.      |
 | `gp_resq_activity`          | Активность очередей ресурсов.                         | Управление и мониторинг использования ресурсов.               |
 | `gp_skew_coefficients`      | Коэффициенты неравномерности распределения данных.    | Оптимизация запросов и распределения данных на сегментах.     |
+  
+</details>
+<details>
+<summary> 3.1 - 08.10</summary>
+
+![image](https://github.com/user-attachments/assets/a1c669b3-90b4-46ae-aef8-334c956e1174)
+
+  
+</details>
+<details>
+<summary> 3.2 - 08.10</summary>
+
+![image](https://github.com/user-attachments/assets/a36e7c6b-1c42-48e5-a6e6-de54bf5c50e9)
   
 </details>
 
