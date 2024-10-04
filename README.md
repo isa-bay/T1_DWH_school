@@ -94,6 +94,13 @@
 ![image](https://github.com/user-attachments/assets/a36e7c6b-1c42-48e5-a6e6-de54bf5c50e9)
   
 </details>
+<details>
+<summary>4.1 - 10.10</summary>
+  
+![image](https://github.com/user-attachments/assets/7962d8bd-0cff-4963-b873-cba1d87f0482)
+
+
+</details>
 
 # Сквозной проект (второй вариант)
 <details>
@@ -122,11 +129,3 @@
 <summary>3.1 - 08.10</summary>
   
 ![image](https://github.com/user-attachments/assets/17c53824-7c06-4547-806b-9ec0bb568581)
-
-</details>
-<details>
-<summary>4.1 - 10.10</summary>
-  
-
-
-</details>
