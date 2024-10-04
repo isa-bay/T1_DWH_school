@@ -137,7 +137,13 @@
 
 <details>
 <summary>✦✦✦ Задание 4 - 10.10 ✦✦✦</summary>
+
+  <details>
+<summary>Сквозное задание R4.1</summary>
+
+![image](https://github.com/user-attachments/assets/8b5bea6b-bf1d-4800-81e9-4a4720755439)
   
+  </details>
 </details>
 
 <details>
