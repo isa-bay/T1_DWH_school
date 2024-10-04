@@ -6,7 +6,8 @@
 
 <details>
 <summary><span style="color: blue;">Задание 1 - 30.09</span></summary>
-  <details>
+
+<details>
 <summary>Практическое задание</summary>
 
   ![Снимок экрана 2024-09-30 172943](https://github.com/user-attachments/assets/a4b25435-41e3-4a2e-abf7-af63afbfcc36)
