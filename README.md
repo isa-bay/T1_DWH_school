@@ -20,14 +20,14 @@
   
 </details>
 <details>
-<summary> R3.1 - 08.10</summary>
+<summary> 3.1 - 08.10</summary>
 
 ![image](https://github.com/user-attachments/assets/a1c669b3-90b4-46ae-aef8-334c956e1174)
 
   
 </details>
 <details>
-<summary> R3.2 - 08.10</summary>
+<summary> 3.2 - 08.10</summary>
 
 ![image](https://github.com/user-attachments/assets/a36e7c6b-1c42-48e5-a6e6-de54bf5c50e9)
 
@@ -36,13 +36,13 @@
 
 # Сквозной проект (второй вариант)
 <details>
-<summary>Проект</summary>
+<summary>Проект №2</summary>
   
 ![Снимок экрана](https://github.com/user-attachments/assets/709c8a8f-58d7-4b23-af03-d782bb9f5b9b)
 
 </details>
 <details>
-<summary>30.09</summary>
+<summary>1 - 30.09</summary>
   
 ![Снимок экрана](https://github.com/user-attachments/assets/94cd1d31-e909-44d7-8a00-579a4081fe6b)
 
@@ -58,13 +58,13 @@
 Такое разделение слоев позволяет эффективно управлять, хранить и предоставлять доступ к данным, соответствуя современным требованиям к организациям хранилищ данных.
 </details>
 <details>
-<summary>08.10 - S3.1</summary>
+<summary>3.1 - 08.10</summary>
   
 ![image](https://github.com/user-attachments/assets/17c53824-7c06-4547-806b-9ec0bb568581)
 
 </details>
 <details>
-<summary>10.10 - S4.1</summary>
+<summary>4.1 - 10.10</summary>
   
 
 
