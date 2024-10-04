@@ -5,7 +5,7 @@
 ![Снимок экрана](https://github.com/user-attachments/assets/709c8a8f-58d7-4b23-af03-d782bb9f5b9b)
 
 <details>
-<summary>Задание 1 - 30.09</summary>
+<summary><span style="color: blue;">Задание 1 - 30.09</span></summary>
   <details>
 <summary>Практическое задание</summary>
 
@@ -39,7 +39,7 @@
 </details>
 
 <details>
-<summary>Задание 2 - 03.10</summary>
+<summary><span style="color: blue;">ЗЗадание 2 - 03.10</span></summary>
 
   <details>
 <summary>Практическое задание</summary>
@@ -112,7 +112,7 @@
 </details>
 
 <details>
-<summary>Задание 3 - 08.10</summary>
+<summary><span style="color: blue;">Задание 3 - 08.10</span></summary>
 
 ![image](https://github.com/user-attachments/assets/a1c669b3-90b4-46ae-aef8-334c956e1174)
 
