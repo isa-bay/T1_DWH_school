@@ -5,7 +5,7 @@
 ![Снимок экрана](https://github.com/user-attachments/assets/709c8a8f-58d7-4b23-af03-d782bb9f5b9b)
 
 <details>
-<summary>:large_blue_diamond::large_blue_diamond: Задание 1 - 30.09 :large_blue_diamond::large_blue_diamond:</summary>
+<summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 1 - 30.09 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
 
 <details>
 <summary>Практическое задание</summary>
@@ -40,7 +40,7 @@
 </details>
 
 <details>
-<summary>✦✦✦ Задание 2 - 03.10 ✦✦✦</summary>
+<summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 2 - 03.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
 
   <details>
 <summary>Практическое задание</summary>
@@ -113,7 +113,7 @@
 </details>
 
 <details>
-<summary>✦✦✦ Задание 3 - 08.10 ✦✦✦</summary>
+<summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 3 - 08.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
 
   <details>
 <summary>Практическое задание R3.1</summary>
@@ -149,7 +149,7 @@
 </details>
 
 <details>
-<summary>✦✦✦ Задание 4 - 10.10 ✦✦✦</summary>
+<summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 4 - 10.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
 
   <details>
 <summary>Сквозное задание R4.1</summary>
