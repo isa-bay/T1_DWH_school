@@ -160,6 +160,6 @@
 </details>
 
 <details>
-<summary>✦✦✦ Задание 5 - 15.10 ✦✦✦</summary>
+<summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 5 - 15.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
 
 </details>
