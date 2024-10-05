@@ -1,7 +1,6 @@
 # Разработчик DWH (Открытая школа Т1)
 
 ## Сквозной проект №2
-
 ![Снимок экрана](https://github.com/user-attachments/assets/709c8a8f-58d7-4b23-af03-d782bb9f5b9b)
 
 <details>
