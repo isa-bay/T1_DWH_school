@@ -150,7 +150,7 @@
 <summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 4 - 10.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
 
   <details>
-<summary>Сквозное задание R4.1</summary>
+<summary>Практическое задание R4.1</summary>
 
 ![image](https://github.com/user-attachments/assets/8b5bea6b-bf1d-4800-81e9-4a4720755439)
   
