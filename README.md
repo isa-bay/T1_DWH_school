@@ -170,6 +170,28 @@
 <details>
 <summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 5 - 15.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
 
+<details>
+<summary>Практическое задание R5.1</summary>
+
+![image](https://github.com/user-attachments/assets/9d560861-18eb-4d0a-91cf-f5f15aa3cfd9)
+
+  
+  </details>
+<details>
+<summary>Сквозное задание S5.1</summary>
+
+![image](https://github.com/user-attachments/assets/c610737a-b262-4d20-8fdb-997c1c4d6ff9)
+
+  
+  </details>
+  <details>
+<summary>Сквозное задание S5.2</summary>
+
+![image](https://github.com/user-attachments/assets/3bcdf57b-c062-4d27-bf69-93f2f4e4dd0d)
+
+  
+  </details>
+  
 </details>
 
 <details>
