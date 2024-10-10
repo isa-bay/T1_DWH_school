@@ -198,8 +198,3 @@
 <summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 6 - 22.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
 
 </details>
-
-<details>
-<summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 7 - 22.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
-
-</details>
