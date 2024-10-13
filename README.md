@@ -240,6 +240,37 @@ erDiagram
 <summary>Практическое задание R4.1</summary>
 
 ![image](https://github.com/user-attachments/assets/8b5bea6b-bf1d-4800-81e9-4a4720755439)
+
+```sql
+BEGIN;
+
+-- Добавляем новую запись
+INSERT INTO payments (loan_id, payment_date, amount, created_at, updated_at) 
+VALUES (101, '2024-10-01', 500.00, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+-- Обновляем существующую запись
+UPDATE payments 
+SET amount = 600.00, updated_at = CURRENT_TIMESTAMP 
+WHERE payment_id = 1;
+
+-- Обновление, которое завершится ошибкой
+UPDATE payments 
+SET amount = 700.00, updated_at = CURRENT_TIMESTAMP 
+WHERE payment_id = -1;
+
+ROLLBACK;
+```
+  
+  </details>
+  
+  <details>
+<summary>Сквозное задание S4.1</summary>
+
+![Снимок экрана 2024-10-14 012301](https://github.com/user-attachments/assets/f4b3d24f-d4a3-484f-bb1e-f0a222a261a1)
+
+```sql
+
+```
   
   </details>
 </details>
