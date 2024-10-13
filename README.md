@@ -143,6 +143,39 @@
 
 ![image](https://github.com/user-attachments/assets/e4d95891-1f98-491f-8300-0f0d6f53dc53)
 
+### ER Диаграмма
+
+#### Organizations
+- **Organization ID** (PK)
+- Organization Information
+
+#### Analytic Accounts
+- **Account ID** (PK)
+- Account Data
+- **Organization ID** (FK)
+
+#### Synthetic Accounts
+- **Synthetic Account ID** (PK)
+- Internal Accounting Data
+
+#### Transactions
+- **Transaction ID** (PK)
+- Financial Operation Data
+- **Account ID** (FK)
+
+### Связи
+
+- **Organizations** → **Analytic Accounts**
+  - Один ко многим: Организация к аналитическим счетам
+  - Связь через Organization ID (FK)
+  
+- **Analytic Accounts** → **Transactions**
+  - Один ко многим: Аналитический счет к транзакциям
+  - Связь через Account ID (FK)
+
+- **Synthetic Accounts** → **Transactions**
+  - Один ко многим: Синтетический счет к транзакциям
+
 
 Проектирование на основе 1-2 НФ по Кимбаллу:
 - Staging Layer: Все таблицы остаются в более "сырых" и первичных формах. Это позволяет собирать данные для дальнейшей обработки и нормализации.
