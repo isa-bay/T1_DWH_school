@@ -143,7 +143,34 @@
 
 ![image](https://github.com/user-attachments/assets/e4d95891-1f98-491f-8300-0f0d6f53dc53)
 
+```mermaid
+erDiagram
+    ORGANIZATIONS {
+        int Organization_ID PK
+        string Organization_Information
+    }
 
+    ANALYTIC_ACCOUNTS {
+        int Account_ID PK
+        string Account_Data
+        int Organization_ID FK
+    }
+
+    SYNTHETIC_ACCOUNTS {
+        int Synthetic_Account_ID PK
+        string Internal_Accounting_Data
+    }
+
+    TRANSACTIONS {
+        int Transaction_ID PK
+        string Financial_Operation_Data
+        int Account_ID FK
+    }
+
+    ORGANIZATIONS ||--o{ ANALYTIC_ACCOUNTS : "maintains"
+    ANALYTIC_ACCOUNTS ||--o{ TRANSACTIONS : "records"
+    SYNTHETIC_ACCOUNTS ||--o{ TRANSACTIONS : "tracks"
+```
 
 Проектирование на основе 1-2 НФ по Кимбаллу:
 - Staging Layer: Все таблицы остаются в более "сырых" и первичных формах. Это позволяет собирать данные для дальнейшей обработки и нормализации.
