@@ -157,7 +157,7 @@ erDiagram
 
     ANALYTIC_ACCOUNTS {
         varchar analytic_account_number
-        int4 organization_id FK
+        int4 organization_id
         varchar synthetic_account_number
         numeric balance
         timestamp created_at
