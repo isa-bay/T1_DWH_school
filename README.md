@@ -145,30 +145,30 @@
 
 ```mermaid
 erDiagram
-   ORGANIZATIONS {
+    ORGANIZATIONS {
         int organization_id PK
         string name
         string registration_number
         string address
         string contact_info
-        timestamp created_at
-        timestamp updated_at
+        datetime created_at
+        datetime updated_at
     }
 
     ANALYTIC_ACCOUNTS {
         varchar analytic_account_number PK
         int organization_id FK
         varchar synthetic_account_number
-        numeric balance (15, 2)
-        timestamp created_at
-        timestamp updated_at
+        float balance
+        datetime created_at
+        datetime updated_at
     }
 
     SYNTHETIC_ACCOUNTS {
         varchar synthetic_account_number PK
         string description
-        timestamp created_at
-        timestamp updated_at
+        datetime created_at
+        datetime updated_at
     }
 
     ORGANIZATIONS ||--o{ ANALYTIC_ACCOUNTS : "maintains"
