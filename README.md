@@ -119,9 +119,11 @@
 ![image](https://github.com/user-attachments/assets/53e12351-4371-4895-9d76-6e56a46e30bc)
 
 ```sql
+-- скопировал в свою БД в схему "3.1 task (payments)"
 INSERT INTO payments
 SELECT * FROM t1_dwh_potok2_datasandbox.payments;
 
+-- создал копию с типом сжатия ZTSD, уровенем сжатия 7 и строчный тип хранения
 CREATE TABLE payments_compressed_row 
 WITH (
     appendonly = true,
@@ -131,6 +133,7 @@ WITH (
 ) AS
 SELECT * FROM payments;
 
+-- создал копию с типом сжатия RLE, уровенем сжатия 4 и колоночный тип хранения
 CREATE TABLE payments_compressed_columnar 
 WITH (
     appendonly = true,
@@ -140,6 +143,10 @@ WITH (
 ) AS
 SELECT * FROM payments;
 ```
+
+![image](https://github.com/user-attachments/assets/b6b363d1-f1c8-49d4-9ffc-bc47f857df75)
+
+
   
   </details>
     <details>
