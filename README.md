@@ -175,7 +175,7 @@ erDiagram
     TRANSACTIONS {
         bigserial transaction_id PK
         varchar analytic_account_number FK
-        numeric(15, 2) amount
+        numeric amount
         timestamp transaction_date
         varchar transaction_type
         varchar description
