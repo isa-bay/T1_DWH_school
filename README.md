@@ -146,7 +146,7 @@
 ```mermaid
 erDiagram
     ORGANIZATIONS {
-        serial4 organization_id PK
+        serial4 organization_id
         varchar name
         varchar registration_number
         varchar address
@@ -156,7 +156,7 @@ erDiagram
     }
 
     ANALYTIC_ACCOUNTS {
-        varchar analytic_account_number PK
+        varchar analytic_account_number
         int4 organization_id FK
         varchar synthetic_account_number
         numeric balance
@@ -165,7 +165,7 @@ erDiagram
     }
 
     SYNTHETIC_ACCOUNTS {
-        varchar synthetic_account_number PK
+        varchar synthetic_account_number
         varchar description
         varchar account_type
         timestamp created_at
@@ -174,7 +174,7 @@ erDiagram
 
     TRANSACTIONS {
         bigserial transaction_id PK
-        varchar analytic_account_number FK
+        varchar analytic_account_number
         numeric amount
         timestamp transaction_date
         varchar transaction_type
