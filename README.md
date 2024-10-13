@@ -118,6 +118,7 @@
 
 ![image](https://github.com/user-attachments/assets/53e12351-4371-4895-9d76-6e56a46e30bc)
 
+```sql
 INSERT INTO payments
 SELECT * FROM t1_dwh_potok2_datasandbox.payments;
 
@@ -138,6 +139,7 @@ WITH (
     compresslevel = 4
 ) AS
 SELECT * FROM payments;
+```
   
   </details>
     <details>
