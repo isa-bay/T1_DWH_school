@@ -145,31 +145,35 @@
 
 ```mermaid
 erDiagram
-    ORGANIZATIONS {
-        int Organization_ID PK
-        string Organization_Information
+   ORGANIZATIONS {
+        int organization_id PK
+        string name
+        string registration_number
+        string address
+        string contact_info
+        timestamp created_at
+        timestamp updated_at
     }
 
     ANALYTIC_ACCOUNTS {
-        int Account_ID PK
-        string Account_Data
-        int Organization_ID FK
+        varchar analytic_account_number PK
+        int organization_id FK
+        varchar synthetic_account_number
+        numeric balance (15, 2)
+        timestamp created_at
+        timestamp updated_at
     }
 
     SYNTHETIC_ACCOUNTS {
-        int Synthetic_Account_ID PK
-        string Internal_Accounting_Data
-    }
-
-    TRANSACTIONS {
-        int Transaction_ID PK
-        string Financial_Operation_Data
-        int Account_ID FK
+        varchar synthetic_account_number PK
+        string description
+        timestamp created_at
+        timestamp updated_at
     }
 
     ORGANIZATIONS ||--o{ ANALYTIC_ACCOUNTS : "maintains"
     ANALYTIC_ACCOUNTS ||--o{ TRANSACTIONS : "records"
-    SYNTHETIC_ACCOUNTS ||--o{ TRANSACTIONS : "tracks"
+    SYNTHETIC_ACCOUNTS ||--|{ ANALYTIC_ACCOUNTS : "links"
 ```
 
 Проектирование на основе 1-2 НФ по Кимбаллу:
