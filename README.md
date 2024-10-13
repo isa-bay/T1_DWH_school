@@ -146,29 +146,41 @@
 ```mermaid
 erDiagram
     ORGANIZATIONS {
-        int organization_id PK
-        string name
-        string registration_number
-        string address
-        string contact_info
-        datetime created_at
-        datetime updated_at
+        serial4 organization_id PK
+        varchar name
+        varchar registration_number
+        varchar address
+        varchar contact_info
+        timestamp created_at
+        timestamp updated_at
     }
 
     ANALYTIC_ACCOUNTS {
         varchar analytic_account_number PK
-        int organization_id FK
+        int4 organization_id FK
         varchar synthetic_account_number
-        float balance
-        datetime created_at
-        datetime updated_at
+        numeric balance
+        timestamp created_at
+        timestamp updated_at
     }
 
     SYNTHETIC_ACCOUNTS {
         varchar synthetic_account_number PK
-        string description
-        datetime created_at
-        datetime updated_at
+        varchar description
+        varchar account_type
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    TRANSACTIONS {
+        bigserial transaction_id PK
+        varchar analytic_account_number FK
+        numeric(15, 2) amount
+        timestamp transaction_date
+        varchar transaction_type
+        varchar description
+        timestamp created_at
+        timestamp updated_at
     }
 
     ORGANIZATIONS ||--o{ ANALYTIC_ACCOUNTS : "maintains"
