@@ -118,7 +118,26 @@
 
 ![image](https://github.com/user-attachments/assets/53e12351-4371-4895-9d76-6e56a46e30bc)
 
+INSERT INTO payments
+SELECT * FROM t1_dwh_potok2_datasandbox.payments;
 
+CREATE TABLE payments_compressed_row 
+WITH (
+    appendonly = true,
+    orientation = 'row',
+    compresslevel = 7,
+    compresstype = 'zstd'
+) AS
+SELECT * FROM payments;
+
+CREATE TABLE payments_compressed_columnar 
+WITH (
+    appendonly = true,
+    orientation = 'column',
+    compresstype = 'rle_type',
+    compresslevel = 4
+) AS
+SELECT * FROM payments;
   
   </details>
     <details>
