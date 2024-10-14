@@ -146,7 +146,7 @@ SELECT * FROM payments;
 
 ![image](https://github.com/user-attachments/assets/b6b363d1-f1c8-49d4-9ffc-bc47f857df75)
 
-
+План выполнения не показал значительных изменений в производительности копий. Возможно я выполнил что-то не верно.
   
   </details>
     <details>
