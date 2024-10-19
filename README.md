@@ -375,6 +375,7 @@ CREATE TABLE core.organizations (
     created_at timestamp,
     updated_at timestamp);
 ```
+![image](https://github.com/user-attachments/assets/0b6a299f-940a-4abf-a6c1-ed9f341823fb)
 
 Скопировал данные в свою бд dwh_2_t1_isabayramov с помощью dblink в подготовленные таблицы
 
