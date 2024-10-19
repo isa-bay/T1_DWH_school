@@ -123,7 +123,8 @@
 INSERT INTO dwh_2_t1_isabayramov.payments_and_loans.payments
 SELECT * FROM dblink('dbname=t1_dwh_potok2_datasandbox',
                      'SELECT * FROM payments_and_loans.payments')
-AS source_table_schema(payment_id int4, loan_id INT4, payment_date DATE, amount NUMERIC, created_at TIMESTAMP, updated_at TIMESTAMP);
+AS source_table_schema(payment_id int4, loan_id INT4,
+payment_date DATE, amount NUMERIC, created_at TIMESTAMP, updated_at TIMESTAMP);
 
 ```
 
@@ -151,10 +152,27 @@ SELECT * FROM payments;
 
 ![image](https://github.com/user-attachments/assets/fcb72157-b2ae-4bc2-bed3-b98852a2d3e2)
 
-План выполнения не показал значительных изменений в производительности копий. Возможно я выполнил что-то не верно.
+
 ![Снимок экрана 2024-10-19 145315](https://github.com/user-attachments/assets/9dc60a67-b6ba-4467-b307-67657bd893e7)
+
+payments:
+Тип хранения: без сжатия
+План выполнения: Показывает последовательное сканирование таблицы
+Самое меньшее потребление памяти и время выполнения по сравнению с другими
+
 ![Снимок экрана 2024-10-19 145121](https://github.com/user-attachments/assets/efb53193-613c-4443-85f6-aa6586fa567b)
+
+payments_compressed_columnar
+Тип хранения: со сжатым столбцовым хранением
+План выполнения: Предлагает более высокий расход памяти и чуть меньше времени выполнения, что может быть результатом эффективного доступа к столбцам
+Обычно хорошо подходит для аналитических запросов, где важен доступ к отдельным столбцам
+
 ![Снимок экрана 2024-10-19 145129](https://github.com/user-attachments/assets/0e54fca3-bb2a-449d-984a-8258507240d3)
+
+payments_compressed_row
+Тип хранения: со сжатым строковым хранением
+План выполнения: Потребление памяти выше, чем у первого плана, но само время выполнения оказалось самым низким среди всех трёх вариантов
+Может быть более эффективным для операций с полными записями
   </details>
     <details>
 <summary>Практическое задание R3.2</summary>
