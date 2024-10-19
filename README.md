@@ -346,6 +346,6 @@ AS source_table_schema(transaction_id bigint,
 </details>
 
 <details>
-<summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 6 - 22.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
+<summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание AirFlow - 23.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
 
 </details>
