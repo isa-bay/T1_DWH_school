@@ -296,7 +296,7 @@ ROLLBACK;
   
   <details>
 <summary>Сквозное задание S4.1</summary>
-
+&#11088;
 Выбрал моделирование по подходу Кимбалла в виде звездой схемы, которая состоит из таблицы фактов (фактограммные) - transactions и таблиц изменений - synthetic_accounts, analytic_accounts, organizations
 
 ### Таблица фактов: transactions (хранит транзакции с подробной информацией)
