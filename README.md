@@ -118,11 +118,16 @@
 
 ![image](https://github.com/user-attachments/assets/53e12351-4371-4895-9d76-6e56a46e30bc)
 
+Скопировал в свою бд dwh_2_t1_isabayramov с помощью dblink в подготовленную таблицу payments
 ```sql
--- скопировал в свою БД в схему "3.1 task (payments)"
-INSERT INTO payments
-SELECT * FROM t1_dwh_potok2_datasandbox.payments;
+INSERT INTO dwh_2_t1_isabayramov.payments_and_loans.payments
+SELECT * FROM dblink('dbname=t1_dwh_potok2_datasandbox',
+                     'SELECT * FROM payments_and_loans.payments')
+AS source_table_schema(payment_id int4, loan_id INT4, payment_date DATE, amount NUMERIC, created_at TIMESTAMP, updated_at TIMESTAMP);
 
+```
+
+```sql
 -- создал копию с типом сжатия ZTSD, уровенем сжатия 7 и строчный тип хранения
 CREATE TABLE payments_compressed_row 
 WITH (
@@ -144,10 +149,12 @@ WITH (
 SELECT * FROM payments;
 ```
 
-![image](https://github.com/user-attachments/assets/b6b363d1-f1c8-49d4-9ffc-bc47f857df75)
+![image](https://github.com/user-attachments/assets/fcb72157-b2ae-4bc2-bed3-b98852a2d3e2)
 
 План выполнения не показал значительных изменений в производительности копий. Возможно я выполнил что-то не верно.
-  
+![Снимок экрана 2024-10-19 145315](https://github.com/user-attachments/assets/9dc60a67-b6ba-4467-b307-67657bd893e7)
+![Снимок экрана 2024-10-19 145121](https://github.com/user-attachments/assets/efb53193-613c-4443-85f6-aa6586fa567b)
+![Снимок экрана 2024-10-19 145129](https://github.com/user-attachments/assets/0e54fca3-bb2a-449d-984a-8258507240d3)
   </details>
     <details>
 <summary>Практическое задание R3.2</summary>
