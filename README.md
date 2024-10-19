@@ -297,6 +297,82 @@ ROLLBACK;
   <details>
 <summary>Сквозное задание S4.1</summary>
 
+## Выбрал моделирование по подходу Кимбалла в виде звездой схемы, которая состоит из таблицы фактов (фактограммные) - transactions и таблиц изменений - synthetic_accounts, analytic_accounts, organizations
+
+### Таблица фактов: transactions (хранит транзакции с подробной информацией)
+Ключи:
+- transaction_id: первичный ключ
+- analytic_account_number: ссылается на analytic_accounts
+Партиционирование по transaction_date для улучшения производительности запросов на временных данных
+Индексы созданы на transaction_date и transaction_type для ускорения выборок
+
+```sql
+CREATE TABLE core.transactions (
+    transaction_id bigserial PRIMARY KEY,
+    analytic_account_number varchar(255) REFERENCES core.analytic_accounts(analytic_account_number),
+    amount numeric(15, 2),
+    transaction_date timestamp,
+    transaction_type varchar(255),
+    description varchar(255),
+    created_at timestamp,
+    updated_at timestamp
+)
+WITH (
+    fillfactor = 70,              -- настройка для сжатия
+    tablespace = fastspace        -- тип хранения
+)
+PARTITION BY RANGE (transaction_date); -- партиционирование
+
+CREATE INDEX idx_transaction_date ON core.transactions (transaction_date);
+CREATE INDEX idx_analytic_account_number ON core.transactions (analytic_account_number);
+CREATE INDEX idx_transaction_type ON core.transactions (transaction_type);
+```
+
+### Таблица измерений: synthetic_accounts (содержит информацию о синтетических счетах)
+synthetic_account_number - первичный ключ
+
+```sql
+CREATE TABLE core.synthetic_accounts (
+    synthetic_account_number varchar(255) PRIMARY KEY,
+    description varchar(255),
+    account_type varchar(255),
+    created_at timestamp,
+    updated_at timestamp);
+```
+
+### Таблица измерений: analytic_accounts (содержит информацию об аналитических счетах)
+Ключи:
+- analytic_account_number: Первичный ключ
+- Связь с organizations через organization_id
+- Связь с synthetic_accounts через synthetic_account_number
+Для ускорения операций соединения создан индекс на synthetic_account_number
+
+```sql
+CREATE TABLE core.analytic_accounts (
+    analytic_account_number varchar(255) PRIMARY KEY,
+    organization_id int REFERENCES core.organizations(organization_id),
+    synthetic_account_number varchar(255) REFERENCES core.synthetic_accounts(synthetic_account_number),
+    balance numeric(15, 2),
+    created_at timestamp,
+    updated_at timestamp);
+
+CREATE INDEX idx_synthetic_account_number ON core.analytic_accounts (synthetic_account_number);
+```
+
+### Таблица измерений: organizations (хранит информацию о организациях)
+organization_id - первичный ключ
+
+```sql
+CREATE TABLE core.organizations (
+    organization_id serial PRIMARY KEY,
+    name varchar(255),
+    registration_number varchar(255),
+    address varchar(255),
+    contact_info varchar(255),
+    created_at timestamp,
+    updated_at timestamp);
+```
+
 ![Снимок экрана 2024-10-14 012301](https://github.com/user-attachments/assets/f4b3d24f-d4a3-484f-bb1e-f0a222a261a1)
 
 Скопировал в свою бд dwh_2_t1_isabayramov с помощью dblink в подготовленные таблицы
