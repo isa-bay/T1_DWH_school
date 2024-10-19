@@ -426,4 +426,6 @@ AS source_table_schema(transaction_id bigint,
 <details>
 <summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание AirFlow - 23.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
 
+![image](https://github.com/user-attachments/assets/4d05aaaa-5be9-4928-a426-ede13b9dedff)
+
 </details>
