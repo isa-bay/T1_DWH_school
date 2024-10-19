@@ -272,12 +272,13 @@ erDiagram
 
 ![image](https://github.com/user-attachments/assets/8b5bea6b-bf1d-4800-81e9-4a4720755439)
 
+Сперва я сделал команды вне транзакции, чтобы посмотреть на изменения в таблицу. А после вне в транзакцию и была ошибка, тк 230001 строка уже была + добавил апдейт айдишника -1. Такая транзакция выдаст ошибку и никакая команда выполнена не будет по принципу атомарности.
 ```sql
 BEGIN;
 
 -- Добавляем новую запись
-INSERT INTO payments (loan_id, payment_date, amount, created_at, updated_at) 
-VALUES (101, '2024-10-01', 500.00, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+INSERT INTO payments (payment_id, loan_id, payment_date, amount, created_at, updated_at) 
+VALUES (230001, 101, '2024-10-01', 500.00, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 -- Обновляем существующую запись
 UPDATE payments 
@@ -291,7 +292,6 @@ WHERE payment_id = -1;
 
 ROLLBACK;
 ```
-  
   </details>
   
   <details>
@@ -299,8 +299,20 @@ ROLLBACK;
 
 ![Снимок экрана 2024-10-14 012301](https://github.com/user-attachments/assets/f4b3d24f-d4a3-484f-bb1e-f0a222a261a1)
 
-```sql
+Скопировал в свою бд dwh_2_t1_isabayramov с помощью dblink в подготовленные таблицы
 
+```sql
+INSERT INTO dwh_2_t1_isabayramov.core.transactions
+SELECT * FROM dblink('dbname=t1_dwh_potok2_datasandbox',
+                     'SELECT * FROM t1_dwh_potok2_accounts.transactions')
+AS source_table_schema(transaction_id bigint,
+    analytic_account varchar(255),
+    amount numeric(15, 2),
+    transaction_date timestamp,
+    transaction_type varchar(255),
+    description varchar(255),
+    created_at timestamp,
+    updated_at timestamp);
 ```
   
   </details>
