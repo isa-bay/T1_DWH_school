@@ -296,6 +296,9 @@ ROLLBACK;
   
   <details>
 <summary>Сквозное задание S4.1</summary>
+    
+![Снимок экрана 2024-10-14 012301](https://github.com/user-attachments/assets/f4b3d24f-d4a3-484f-bb1e-f0a222a261a1)
+    
 &#11088;
 Выбрал моделирование по подходу Кимбалла в виде звездой схемы, которая состоит из таблицы фактов (фактограммные) - transactions и таблиц изменений - synthetic_accounts, analytic_accounts, organizations
 
@@ -373,9 +376,7 @@ CREATE TABLE core.organizations (
     updated_at timestamp);
 ```
 
-![Снимок экрана 2024-10-14 012301](https://github.com/user-attachments/assets/f4b3d24f-d4a3-484f-bb1e-f0a222a261a1)
-
-Скопировал в свою бд dwh_2_t1_isabayramov с помощью dblink в подготовленные таблицы
+Скопировал данные в свою бд dwh_2_t1_isabayramov с помощью dblink в подготовленные таблицы
 
 ```sql
 INSERT INTO dwh_2_t1_isabayramov.core.transactions
