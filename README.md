@@ -304,27 +304,34 @@ ROLLBACK;
 
 ### Таблица фактов: transactions (хранит транзакции с подробной информацией)
 Ключи:
-- transaction_id: первичный ключ
+- transaction_id, transaction_date: составной первичный ключ
 - analytic_account_number: ссылается на analytic_accounts
-Партиционирование по transaction_date для улучшения производительности запросов на временных данных
+Партиционирование по transaction_date для улучшения производительности запросов на временных данных. По дням, тк в сквозном проекте будет обнавление каждые 4 часа и для удобства партиция в размере дня
 Индексы созданы на transaction_date и transaction_type для ускорения выборок
+Сжатие не применял, тк это не append-only таблица. Нам нужны ключи
 
 ```sql
 CREATE TABLE core.transactions (
-    transaction_id bigserial PRIMARY KEY,
-    analytic_account_number varchar(255) REFERENCES core.analytic_accounts(analytic_account_number),
-    amount numeric(15, 2),
-    transaction_date timestamp,
-    transaction_type varchar(255),
-    description varchar(255),
-    created_at timestamp,
-    updated_at timestamp
+    transaction_id bigserial,
+    analytic_account_number varchar(255) NOT NULL REFERENCES core.analytic_accounts(analytic_account_number),
+    balance_account_number varchar(255) NOT NULL,
+    amount numeric(15, 2) NOT NULL,
+    transaction_date date NOT NULL,
+    transaction_type varchar(50) NOT NULL,
+    description text,
+    created_at timestamp DEFAULT current_timestamp,
+    updated_at timestamp DEFAULT current_timestamp,
+    PRIMARY KEY (transaction_id, transaction_date)
 )
-WITH (
-    fillfactor = 70,              -- настройка для сжатия
-    tablespace = fastspace        -- тип хранения
-)
-PARTITION BY RANGE (transaction_date); -- партиционирование
+DISTRIBUTED BY (transaction_id)
+PARTITION BY RANGE (transaction_date)
+(
+    START ('2020-01-01') END ('2021-01-01') EVERY (INTERVAL '1 day'),
+    START ('2021-01-01') END ('2022-01-01') EVERY (INTERVAL '1 day'),
+    START ('2022-01-01') END ('2023-01-01') EVERY (INTERVAL '1 day'),
+    START ('2023-01-01') END ('2024-01-01') EVERY (INTERVAL '1 day'),
+    START ('2024-01-01') END ('2025-01-01') EVERY (INTERVAL '1 day')
+);
 
 CREATE INDEX idx_transaction_date ON core.transactions (transaction_date);
 CREATE INDEX idx_analytic_account_number ON core.transactions (analytic_account_number);
