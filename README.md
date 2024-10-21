@@ -4,7 +4,7 @@
 ![Снимок экрана](https://github.com/user-attachments/assets/709c8a8f-58d7-4b23-af03-d782bb9f5b9b)
 
 <details>
-<summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 1 - 30.09 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
+<summary>🔷🔷🔷 Задание 1 - 30.09 🔷🔷🔷</summary>
 
 <details>
 <summary>Практическое задание</summary>
@@ -38,7 +38,7 @@
 </details>
 
 <details>
-<summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 2 - 03.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
+<summary>🔷🔷🔷 Задание 2 - 03.10 🔷🔷🔷</summary>
 
   <details>
 <summary>Практическое задание</summary>
@@ -111,7 +111,7 @@
 </details>
 
 <details>
-<summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 3 - 08.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
+<summary>🔷🔷🔷 Задание 3 - 08.10 🔷🔷🔷</summary>
 
   <details>
 <summary>Практическое задание R3.1</summary>
@@ -265,7 +265,7 @@ erDiagram
 </details>
 
 <details>
-<summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 4 - 10.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
+<summary>🔷🔷🔷 Задание 4 - 10.10 🔷🔷🔷</summary>
 
   <details>
 <summary>Практическое задание R4.1</summary>
@@ -404,7 +404,7 @@ AS source_table_schema(transaction_id bigint,
 </details>
 
 <details>
-<summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание 5 - 15.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
+<summary>🔷🔷🔷 Задание 5 - 15.10 🔷🔷🔷</summary>
 
 <details>
 <summary>Практическое задание R5.1</summary>
@@ -431,8 +431,15 @@ AS source_table_schema(transaction_id bigint,
 </details>
 
 <details>
-<summary>:large_blue_diamond::large_blue_diamond::large_blue_diamond: Задание AirFlow - 23.10 :large_blue_diamond::large_blue_diamond::large_blue_diamond:</summary>
+<summary>🔷🔷🔷 Задание AirFlow - 23.10 🔷🔷🔷</summary>
 
 ![image](https://github.com/user-attachments/assets/4d05aaaa-5be9-4928-a426-ede13b9dedff)
+
+</details>
+
+<details>
+<summary>🔷🔷🔷 Задание 6 - 28.10 🔷🔷🔷</summary>
+
+
 
 </details>
